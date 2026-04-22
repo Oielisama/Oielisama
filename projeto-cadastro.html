@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-user-plus"></i> Sistema de Cadastro</h1>
+            <p>Bem-vindo ao nosso sistema de cadastro! Aqui você pode criar uma conta para acessar nossos serviços exclusivos. Por favor, preencha o formulário abaixo para se registrar.</p>
+        </header>
+
+        <form id=" "cadastroForm" class="form-cadastro">
+        <div class="form-group">
+            <label for="nome"><i class="fas fa-user"></i> Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <span class="error-message" id="nomeError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="senha"><i class="fas fa-lock"></i> Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <span class="error-message" id="senhaError"></span>
+        </div>
+
+        <div class="forn-group checkbox-group">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos"><i class="fas fa-check"></i> Aceito os termos e condições</label>
+            <span class="error-message" id="termosError"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Cadastrar
+            </button>
+
+        </form>    
+
+        <div id="sucessoMessage" class="sucesso-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Cadastro realizado com sucesso!</h3>
+            <p>Você receberá um email de confirmação.</p>
+            <button onclick="reiniciarForm()" class="btn-reiniciar">Novo Cadastro</button>
+        </div>
+
+        <div id="usuariosLista" class="usuarios-lista">
+            <h3>Usuários Cadastrados</h3>
+            <div id="listaUsuarios"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
